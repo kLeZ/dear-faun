@@ -2,8 +2,8 @@ spring:
     application:
         name: Dear Faun
     main:
-        banner-mode: off
-        log-startup-info: false
+        banner-mode: console
+        log-startup-info: true
     shell:
         command:
             help:
