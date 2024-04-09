@@ -18,15 +18,9 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.profile;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import java.util.Collection;
 
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.NONE).run(args);
-	}
+public record Player(String name, Collection<Character> characters) {
 }

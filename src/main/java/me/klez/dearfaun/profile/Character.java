@@ -18,15 +18,18 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.profile;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import me.klez.dearfaun.profile.abilityscores.AbilityScore;
+import me.klez.dearfaun.profile.action.Action;
+import me.klez.dearfaun.profile.skill.Skill;
 
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.NONE).run(args);
+import java.util.HashSet;
+import java.util.Set;
+
+public record Character(Player owner, GeneralInfo info, Set<Action> actions, Set<Skill> skills,
+                        Set<AbilityScore> abilityScores) {
+	public Character(Player owner, GeneralInfo info) {
+		this(owner, info, new HashSet<>(), new HashSet<>(), new HashSet<>());
 	}
 }

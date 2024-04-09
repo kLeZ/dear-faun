@@ -18,15 +18,20 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.profile.action;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.NONE).run(args);
-	}
+/**
+ * This interface represents an action that can be performed by an RPG
+ * Character.<br/>
+ * There are many action types, two of which must be "Talk" and "Attack",
+ * because of the mandatory actions that an RPG Character can necessarily
+ * perform.
+ *
+ * @author kLeZ
+ */
+public sealed interface Action permits TalkAction, AttackAction {
+	/**
+	 * Performs the action of this action object.
+	 */
+	void perform();
 }

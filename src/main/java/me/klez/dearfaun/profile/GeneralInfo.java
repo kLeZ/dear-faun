@@ -18,15 +18,16 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.profile;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import me.klez.dearfaun.profile.type.GenderType;
 
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.NONE).run(args);
-	}
+import javax.measure.Quantity;
+import javax.measure.quantity.Length;
+import javax.measure.quantity.Mass;
+import java.time.ZonedDateTime;
+
+public record GeneralInfo(String name, String description, Color skinColor, Color hairColor, Color eyesColor,
+                          Quantity<Length> height, Quantity<Mass> weight, ZonedDateTime dateOfBirth, GenderType gender,
+                          String philosophyDeityReligion) {
 }

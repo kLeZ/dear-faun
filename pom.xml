@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright (C) 2024 Alessandro 'kLeZ' Accardo
+  ~ Copyright (c) 2024 Alessandro 'kLeZ' Accardo.
   ~
-  ~ This file is part of RG-RPG.
+  ~ This file is part of dear-faun.
   ~
-  ~ RG-RPG is free software: you can redistribute it and/or modify
+  ~ dear-faun is free software: you can redistribute it and/or modify
   ~ it under the terms of the GNU General Public License as published by
   ~ the Free Software Foundation, either version 3 of the License, or
   ~ (at your option) any later version.
   ~
-  ~ RG-RPG is distributed in the hope that it will be useful,
+  ~ dear-faun is distributed in the hope that it will be useful,
   ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
   ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
   ~ GNU General Public License for more details.
   ~
   ~ You should have received a copy of the GNU General Public License
-  ~ along with RG-RPG.  If not, see <http://www.gnu.org/licenses/>.
+  ~ along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
   ~
   -->
 
@@ -70,6 +70,7 @@
 		<threeten-extra.version>1.7.2</threeten-extra.version>
 		<mapstruct.version>1.5.5.Final</mapstruct.version>
 		<lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+		<indriya.version>2.0.4</indriya.version>
 		<jpackage-maven-plugin.version>1.6.0</jpackage-maven-plugin.version>
 	</properties>
 	<dependencies>
@@ -111,6 +112,11 @@
 			<groupId>org.mapstruct</groupId>
 			<artifactId>mapstruct-processor</artifactId>
 			<version>${mapstruct.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>tech.units</groupId>
+			<artifactId>indriya</artifactId>
+			<version>${indriya.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

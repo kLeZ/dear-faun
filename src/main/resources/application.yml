@@ -1,31 +1,31 @@
 spring:
-    application:
-        name: Dear Faun
-    main:
-        banner-mode: console
-        log-startup-info: true
-    shell:
-        command:
-            help:
-                grouping-mode: group
-            version:
-                enabled: true
-                show-build-artifact: true
-                show-build-group: true
-                show-build-name: true
-                show-build-time: true
-                show-build-version: true
-                show-git-branch: true
-                show-git-commit-id: true
-                show-git-short-commit-id: true
-                show-git-commit-time: true
+  application:
+    name: Dear Faun
+  main:
+    banner-mode: console
+    log-startup-info: true
+  shell:
+    command:
+      help:
+        grouping-mode: group
+      version:
+        enabled: true
+        show-build-artifact: true
+        show-build-group: true
+        show-build-name: true
+        show-build-time: true
+        show-build-version: true
+        show-git-branch: true
+        show-git-commit-id: true
+        show-git-short-commit-id: true
+        show-git-commit-time: true
 logging:
-    pattern:
-        console:
-    file:
-        name: null
-    level:
-        me.klez: warn
-        org.springframework.context.annotation: off
-        root: warn
-    register-shutdown-hook: false
+  pattern:
+    console:
+  file:
+    name: null
+  level:
+    me.klez: warn
+    org.springframework.context.annotation: off
+    root: warn
+  register-shutdown-hook: false

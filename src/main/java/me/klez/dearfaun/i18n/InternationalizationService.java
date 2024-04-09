@@ -18,15 +18,16 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.i18n;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import java.util.Locale;
 
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.NONE).run(args);
-	}
+public interface InternationalizationService {
+	String translate(String key, Locale locale);
+
+	String translate(String key, Locale locale, Object... args);
+
+	String translate(String key);
+
+	String translate(String key, Object... args);
 }

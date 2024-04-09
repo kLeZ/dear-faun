@@ -18,15 +18,22 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.settings;
 
-import org.springframework.boot.WebApplicationType;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
+import jakarta.annotation.Nonnull;
+import me.klez.dearfaun.profile.Character;
+import me.klez.dearfaun.profile.Player;
 
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(Application.class).web(WebApplicationType.NONE).run(args);
-	}
+import java.util.Optional;
+
+public interface SettingsService {
+	@Nonnull
+	Optional<Player> currentPlayer();
+
+	@Nonnull
+	Optional<Character> currentCharacter();
+
+	void save();
+
+	void load();
 }
