@@ -5,7 +5,7 @@ spring:
     banner-mode: console
     log-startup-info: true
   shell:
-    noninteractive:
+    interactive:
       enabled: false
     command:
       help:
@@ -23,7 +23,13 @@ spring:
         show-git-commit-time: true
     script:
       enabled: false
+    context:
+      close: false
 logging:
+  pattern:
+    console:
+  file:
+    name: null
   level:
     me.klez: trace
     root: info

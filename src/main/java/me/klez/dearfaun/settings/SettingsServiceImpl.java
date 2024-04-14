@@ -18,14 +18,36 @@
  *
  */
 
-package me.klez.dearfaun;
+package me.klez.dearfaun.settings;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import jakarta.annotation.Nonnull;
+import me.klez.dearfaun.profile.Character;
+import me.klez.dearfaun.profile.Player;
+import org.springframework.stereotype.Service;
 
-@SpringBootApplication
-public class Application {
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+import java.util.Optional;
+
+@Service
+public class SettingsServiceImpl implements SettingsService {
+	@Nonnull
+	@Override
+	public Optional<Player> currentPlayer() {
+		return Optional.empty();
+	}
+
+	@Nonnull
+	@Override
+	public Optional<Character> currentCharacter() {
+		return Optional.empty();
+	}
+
+	@Override
+	public void save() {
+
+	}
+
+	@Override
+	public void load() {
+
 	}
 }

@@ -20,9 +20,6 @@
 
 package me.klez.dearfaun;
 
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import me.klez.dearfaun.settings.SettingsService;
 import org.junit.jupiter.api.Test;
@@ -37,14 +34,13 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @Slf4j
-@RequiredArgsConstructor(onConstructor = @__(@Autowired))
-@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(webEnvironment = WebEnvironment.MOCK, classes = Application.class, properties = "spring.shell.interactive.enabled=false")
+@SpringBootTest(webEnvironment = WebEnvironment.MOCK, classes = Application.class)
 class ApplicationIT {
 	@MockBean
-	SettingsService settingsServiceMock;
-	ApplicationContext ctx;
+	private SettingsService settingsServiceMock;
+	@Autowired
+	private ApplicationContext ctx;
 
 	@Test
 	void contextLoads() {
