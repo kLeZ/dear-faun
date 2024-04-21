@@ -17,7 +17,6 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 package me.klez.dearfaun.profile.abilityscores;
 
 public final class DexterityAbilityScore extends ModifierAbilityScore {

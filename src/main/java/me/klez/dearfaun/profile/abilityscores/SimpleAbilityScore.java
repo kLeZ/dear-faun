@@ -17,7 +17,6 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 package me.klez.dearfaun.profile.abilityscores;
 
 public record SimpleAbilityScore(String name, short value) implements AbilityScore {

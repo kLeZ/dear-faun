@@ -17,7 +17,6 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 package me.klez.dearfaun.shell;
 
 import lombok.AccessLevel;
@@ -40,7 +39,6 @@ import org.springframework.stereotype.Component;
 public class PromptProviderImpl implements PromptProvider {
 	static String promptEnv = "DEAR_FAUN_PROMPT";
 	static String promptDefault = "\\s@\\p> ";
-
 	InternationalizationService i18nService;
 	SettingsService settingsService;
 
@@ -78,7 +76,6 @@ public class PromptProviderImpl implements PromptProvider {
 		var ret = new AttributedStringBuilder();
 		char[] tokens = prompt.toCharArray();
 		boolean isCommand = false;
-
 		for (char token : tokens) {
 			if (isCommand) {
 				isCommand = false;

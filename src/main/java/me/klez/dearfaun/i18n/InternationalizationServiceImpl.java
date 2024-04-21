@@ -17,26 +17,21 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 package me.klez.dearfaun.i18n;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.context.MessageSource;
-import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.stereotype.Service;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 @Service
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class InternationalizationServiceImpl implements InternationalizationService {
-	private final MessageSource messageSource;
-
-	public InternationalizationServiceImpl() {
-		ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-		messageSource.setBasenames(STR."\{getClass().getPackage().getName()}/messages");
-		messageSource.setDefaultEncoding(StandardCharsets.UTF_8.name());
-		this.messageSource = messageSource;
-	}
+	MessageSource messageSource;
 
 	@Override
 	public String translate(String key, Locale locale) {

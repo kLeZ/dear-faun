@@ -17,7 +17,6 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 package me.klez.dearfaun.settings;
 
 import jakarta.annotation.Nonnull;
@@ -29,6 +28,8 @@ import java.util.Optional;
 
 @Service
 public class SettingsServiceImpl implements SettingsService {
+	private boolean debug;
+
 	@Nonnull
 	@Override
 	public Optional<Player> currentPlayer() {
@@ -43,11 +44,20 @@ public class SettingsServiceImpl implements SettingsService {
 
 	@Override
 	public void save() {
-
 	}
 
 	@Override
 	public void load() {
+	}
 
+	@Override
+	public boolean isDebug() {
+		return debug;
+	}
+
+	@Override
+	public boolean setDebug(boolean debug) {
+		this.debug = debug;
+		return isDebug();
 	}
 }

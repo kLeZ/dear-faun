@@ -17,7 +17,6 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
 package me.klez.dearfaun.profile.action;
 
 public abstract sealed class AttackAction implements Action permits MeleeAttackAction, RangedAttackAction, GrappleAttackAction {

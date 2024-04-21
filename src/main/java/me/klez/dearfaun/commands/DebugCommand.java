@@ -17,12 +17,23 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package me.klez.dearfaun.profile.skill;
+package me.klez.dearfaun.commands;
 
-import me.klez.dearfaun.profile.abilityscores.AbilityScore;
+import me.klez.dearfaun.settings.SettingsService;
+import org.springframework.stereotype.Component;
 
-public final class AlwaysRetryableSkill extends RetryableSkill {
-	public AlwaysRetryableSkill(String name, AbilityScore abilityScore, int ranks, int[] misc, boolean trained) {
-		super(name, abilityScore, ranks, misc, trained);
+@Component
+public class DebugCommand {
+	private final SettingsService settingsService;
+
+	public DebugCommand(SettingsService settingsService) {
+		this.settingsService = settingsService;
+	}
+
+	public boolean debug(Boolean enabled) {
+		if (enabled == null) {
+			return settingsService.isDebug();
+		}
+		return settingsService.setDebug(enabled);
 	}
 }

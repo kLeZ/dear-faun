@@ -17,8 +17,7 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-
-package me.klez.dearfaun;
+package me.klez.dearfaun.commands;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

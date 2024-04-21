@@ -17,12 +17,7 @@
  * along with dear-faun.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
-package me.klez.dearfaun.profile.skill;
+package me.klez.dearfaun.commands;
 
-import me.klez.dearfaun.profile.abilityscores.AbilityScore;
-
-public final class AlwaysRetryableSkill extends RetryableSkill {
-	public AlwaysRetryableSkill(String name, AbilityScore abilityScore, int ranks, int[] misc, boolean trained) {
-		super(name, abilityScore, ranks, misc, trained);
-	}
+public interface CommandsMarker {
 }
